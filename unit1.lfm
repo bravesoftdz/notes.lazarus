@@ -12,8 +12,8 @@ object FormMain: TFormMain
   Constraints.MinHeight = 362
   Constraints.MinWidth = 263
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -11
-  Font.Name = 'Consolas'
+  Font.Height = -13
+  Font.Name = 'DejaVu Sans Mono'
   Font.Pitch = fpFixed
   Font.Quality = fqDraft
   FormStyle = fsSystemStayOnTop
@@ -208,6 +208,7 @@ object FormMain: TFormMain
         7303477E25F0915F70FE0300CEB354C60E4CEF3B0000000049454E44AE426082
       }
       Stretch = True
+      Visible = False
     end
     object ButtonNew: TButton
       Left = 5
@@ -222,7 +223,7 @@ object FormMain: TFormMain
       Left = 224
       Height = 25
       Top = 5
-      Width = 67
+      Width = 83
       Caption = 'Settings'
       OnClick = ButtonSettingsClick
       TabOrder = 1
@@ -371,6 +372,7 @@ object FormMain: TFormMain
         44AE426082
       }
       Stretch = True
+      Visible = False
     end
     object EditName: TEdit
       Left = 5
@@ -506,6 +508,7 @@ object FormMain: TFormMain
         0000000049454E44AE426082
       }
       Stretch = True
+      Visible = False
     end
     object ButtonDone: TButton
       Left = 5
@@ -639,6 +642,7 @@ object FormMain: TFormMain
         82
       }
       Stretch = True
+      Visible = False
     end
     object EditRename: TEdit
       Left = 5

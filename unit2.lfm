@@ -1,0 +1,147 @@
+object FormSettings: TFormSettings
+  Left = 637
+  Height = 393
+  Top = 313
+  Width = 310
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Settings'
+  ClientHeight = 393
+  ClientWidth = 310
+  OnCreate = FormCreate
+  PopupMode = pmAuto
+  Position = poScreenCenter
+  ShowInTaskBar = stNever
+  LCLVersion = '0.9.31'
+  object ButtonCancel: TButton
+    Left = 229
+    Height = 25
+    Top = 360
+    Width = 75
+    Caption = 'Cancel'
+    OnClick = ButtonCancelClick
+    TabOrder = 0
+  end
+  object ButtonSave: TButton
+    Left = 149
+    Height = 25
+    Top = 360
+    Width = 75
+    Caption = 'Save'
+    OnClick = ButtonSaveClick
+    TabOrder = 1
+  end
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 344
+    Top = 8
+    Width = 296
+    ActivePage = TabSheetDisplay
+    TabIndex = 0
+    TabOrder = 2
+    object TabSheetDisplay: TTabSheet
+      Caption = 'Display'
+    end
+    object TabSheetStorage: TTabSheet
+      Caption = 'Storage'
+      ClientHeight = 317
+      ClientWidth = 292
+      object Label1: TLabel
+        Left = 6
+        Height = 14
+        Top = 21
+        Width = 50
+        Caption = 'Directory'
+        ParentColor = False
+      end
+      object EditPath: TEdit
+        Left = 70
+        Height = 23
+        Top = 12
+        Width = 184
+        TabOrder = 0
+      end
+      object Button1: TButton
+        Left = 254
+        Height = 23
+        Top = 12
+        Width = 32
+        Caption = '...'
+        OnClick = Button1Click
+        TabOrder = 1
+      end
+    end
+    object TabSheetRemote: TTabSheet
+      Caption = 'Remote'
+      ClientHeight = 317
+      ClientWidth = 292
+      object Label2: TLabel
+        Left = 6
+        Height = 14
+        Top = 19
+        Width = 26
+        Caption = 'Host'
+        ParentColor = False
+      end
+      object EditHost: TEdit
+        Left = 70
+        Height = 23
+        Top = 11
+        Width = 216
+        TabOrder = 0
+      end
+      object EditUsername: TEdit
+        Left = 70
+        Height = 23
+        Top = 35
+        Width = 216
+        TabOrder = 1
+      end
+      object Label3: TLabel
+        Left = 6
+        Height = 14
+        Top = 43
+        Width = 57
+        Caption = 'Username'
+        ParentColor = False
+      end
+      object Label4: TLabel
+        Left = 6
+        Height = 14
+        Top = 67
+        Width = 53
+        Caption = 'Password'
+        ParentColor = False
+      end
+      object EditPassword: TEdit
+        Left = 70
+        Height = 23
+        Top = 59
+        Width = 216
+        TabOrder = 2
+      end
+      object EditPassword1: TEdit
+        Left = 70
+        Height = 23
+        Top = 83
+        Width = 216
+        TabOrder = 3
+      end
+      object Label5: TLabel
+        Left = 6
+        Height = 14
+        Top = 91
+        Width = 50
+        Caption = 'Directory'
+        ParentColor = False
+      end
+    end
+    object TabSheetSecurity: TTabSheet
+      Caption = 'Security'
+    end
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    left = 88
+    top = 320
+  end
+end

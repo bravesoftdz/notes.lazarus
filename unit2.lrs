@@ -1,0 +1,38 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TFormSettings','FORMDATA',[
+  'TPF0'#13'TFormSettings'#12'FormSettings'#4'Left'#3'}'#2#6'Height'#3#137#1#3
+  +'Top'#3'9'#1#5'Width'#3'6'#1#11'BorderIcons'#11#0#11'BorderStyle'#7#8'bsSing'
+  +'le'#7'Caption'#6#8'Settings'#12'ClientHeight'#3#137#1#11'ClientWidth'#3'6'#1
+  +#8'OnCreate'#7#10'FormCreate'#9'PopupMode'#7#6'pmAuto'#8'Position'#7#14'poSc'
+  +'reenCenter'#13'ShowInTaskBar'#7#7'stNever'#10'LCLVersion'#6#6'0.9.31'#0#7'T'
+  +'Button'#12'ButtonCancel'#4'Left'#3#229#0#6'Height'#2#25#3'Top'#3'h'#1#5'Wid'
+  +'th'#2'K'#7'Caption'#6#6'Cancel'#7'OnClick'#7#17'ButtonCancelClick'#8'TabOrd'
+  +'er'#2#0#0#0#7'TButton'#10'ButtonSave'#4'Left'#3#149#0#6'Height'#2#25#3'Top'
+  +#3'h'#1#5'Width'#2'K'#7'Caption'#6#4'Save'#7'OnClick'#7#15'ButtonSaveClick'#8
+  +'TabOrder'#2#1#0#0#12'TPageControl'#12'PageControl1'#4'Left'#2#8#6'Height'#3
+  +'X'#1#3'Top'#2#8#5'Width'#3'('#1#10'ActivePage'#7#15'TabSheetDisplay'#8'TabI'
+  +'ndex'#2#0#8'TabOrder'#2#2#0#9'TTabSheet'#15'TabSheetDisplay'#7'Caption'#6#7
+  +'Display'#0#0#9'TTabSheet'#15'TabSheetStorage'#7'Caption'#6#7'Storage'#12'Cl'
+  +'ientHeight'#3'='#1#11'ClientWidth'#3'$'#1#0#6'TLabel'#6'Label1'#4'Left'#2#6
+  +#6'Height'#2#14#3'Top'#2#21#5'Width'#2'2'#7'Caption'#6#9'Directory'#11'Paren'
+  +'tColor'#8#0#0#5'TEdit'#8'EditPath'#4'Left'#2'F'#6'Height'#2#23#3'Top'#2#12#5
+  +'Width'#3#184#0#8'TabOrder'#2#0#0#0#7'TButton'#7'Button1'#4'Left'#3#254#0#6
+  +'Height'#2#23#3'Top'#2#12#5'Width'#2' '#7'Caption'#6#3'...'#7'OnClick'#7#12
+  +'Button1Click'#8'TabOrder'#2#1#0#0#0#9'TTabSheet'#14'TabSheetRemote'#7'Capti'
+  +'on'#6#6'Remote'#12'ClientHeight'#3'='#1#11'ClientWidth'#3'$'#1#0#6'TLabel'#6
+  +'Label2'#4'Left'#2#6#6'Height'#2#14#3'Top'#2#19#5'Width'#2#26#7'Caption'#6#4
+  +'Host'#11'ParentColor'#8#0#0#5'TEdit'#8'EditHost'#4'Left'#2'F'#6'Height'#2#23
+  +#3'Top'#2#11#5'Width'#3#216#0#8'TabOrder'#2#0#0#0#5'TEdit'#12'EditUsername'#4
+  +'Left'#2'F'#6'Height'#2#23#3'Top'#2'#'#5'Width'#3#216#0#8'TabOrder'#2#1#0#0#6
+  +'TLabel'#6'Label3'#4'Left'#2#6#6'Height'#2#14#3'Top'#2'+'#5'Width'#2'9'#7'Ca'
+  +'ption'#6#8'Username'#11'ParentColor'#8#0#0#6'TLabel'#6'Label4'#4'Left'#2#6#6
+  +'Height'#2#14#3'Top'#2'C'#5'Width'#2'5'#7'Caption'#6#8'Password'#11'ParentCo'
+  +'lor'#8#0#0#5'TEdit'#12'EditPassword'#4'Left'#2'F'#6'Height'#2#23#3'Top'#2';'
+  +#5'Width'#3#216#0#8'TabOrder'#2#2#0#0#5'TEdit'#13'EditPassword1'#4'Left'#2'F'
+  +#6'Height'#2#23#3'Top'#2'S'#5'Width'#3#216#0#8'TabOrder'#2#3#0#0#6'TLabel'#6
+  +'Label5'#4'Left'#2#6#6'Height'#2#14#3'Top'#2'['#5'Width'#2'2'#7'Caption'#6#9
+  +'Directory'#11'ParentColor'#8#0#0#0#9'TTabSheet'#16'TabSheetSecurity'#7'Capt'
+  +'ion'#6#8'Security'#0#0#0#22'TSelectDirectoryDialog'#22'SelectDirectoryDialo'
+  +'g1'#4'left'#2'X'#3'top'#3'@'#1#0#0#0
+]);

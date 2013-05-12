@@ -24,10 +24,6 @@ type
     ButtonCreate: TButton;
     EditName: TEdit;
     EditRename: TEdit;
-    ImageBlue: TImage;
-    ImageOrange: TImage;
-    ImageRed: TImage;
-    ImageGreen: TImage;
     LabelName: TLabel;
     ListViewNotes: TListBox;
     MemoNote: TMemo;

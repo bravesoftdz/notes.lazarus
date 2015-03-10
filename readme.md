@@ -1,6 +1,6 @@
 #Notes
 
-Takin notes make human more productive but developer twice productive
+Taking notes makes human more productive but developer twice productive
 
 If you dont want to compile it yourself you can use precompiled bnote.exe for Windows
 Or bnote for linux

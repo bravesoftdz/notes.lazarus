@@ -1,21 +1,21 @@
 object FormMain: TFormMain
-  Left = 492
+  Left = 432
   Height = 414
-  Top = 258
+  Top = 168
   Width = 398
   ActiveControl = PanelMain
   AlphaBlend = True
   AlphaBlendValue = 230
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsSingle
   Caption = 'Notes'
   ClientHeight = 414
   ClientWidth = 398
+  Color = clForm
   Constraints.MinHeight = 362
   Constraints.MinWidth = 263
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -16
-  Font.Name = 'Ubuntu Mono'
+  Font.Height = -13
+  Font.Name = 'DejaVu Sans Mono'
   Font.Pitch = fpFixed
   Font.Quality = fqDraft
   FormStyle = fsSystemStayOnTop
@@ -5627,52 +5627,63 @@ object FormMain: TFormMain
   OnDeactivate = FormDeactivate
   OnDestroy = FormDestroy
   OnShow = FormShow
-  LCLVersion = '1.0.8.0'
+  LCLVersion = '1.2.6.0'
   Visible = True
   object PanelList: TPanel
     Left = 0
-    Height = 274
-    Top = 140
+    Height = 277
+    Top = 137
     Width = 398
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 274
+    ClientHeight = 277
     ClientWidth = 398
     TabOrder = 5
     object ListViewNotes: TListBox
-      Left = 4
-      Height = 266
-      Top = 4
-      Width = 390
+      Left = 0
+      Height = 277
+      Top = 0
+      Width = 398
       Align = alClient
-      BorderSpacing.Around = 4
       BorderSpacing.InnerBorder = 3
+      BorderStyle = bsNone
+      Color = 2238503
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'DejaVu Sans Mono'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
       Items.Strings = (
         ''
       )
       ItemHeight = 20
       OnDblClick = ListViewNotesDblClick
+      OnDrawItem = ListViewNotesDrawItem
       OnKeyDown = ListViewNotesKeyDown
       OnMouseWheel = ListViewNotesMouseWheel
+      ParentFont = False
       Style = lbOwnerDrawFixed
       TabOrder = 0
     end
   end
   object PanelMain: TPanel
     Left = 0
-    Height = 35
+    Height = 32
     Top = 0
     Width = 398
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 35
+    ClientHeight = 32
     ClientWidth = 398
+    Color = clForm
+    ParentColor = False
     TabOrder = 0
     object ButtonNew: TButton
       Left = 5
       Height = 25
-      Top = 5
-      Width = 54
+      Top = 3
+      Width = 56
       Caption = 'New'
       OnClick = ButtonNewClick
       TabOrder = 0
@@ -5680,7 +5691,7 @@ object FormMain: TFormMain
     object ButtonSettings: TButton
       Left = 224
       Height = 25
-      Top = 5
+      Top = 3
       Width = 80
       Caption = 'Settings'
       OnClick = ButtonSettingsClick
@@ -5688,10 +5699,10 @@ object FormMain: TFormMain
       Visible = False
     end
     object ButtonDelete: TButton
-      Left = 64
+      Left = 65
       Height = 25
-      Top = 5
-      Width = 59
+      Top = 3
+      Width = 58
       Caption = 'Delete'
       OnClick = ButtonDeleteClick
       TabOrder = 2
@@ -5699,7 +5710,7 @@ object FormMain: TFormMain
     object ButtonRename: TButton
       Left = 127
       Height = 25
-      Top = 5
+      Top = 3
       Width = 59
       Caption = 'Rename'
       OnClick = ButtonRenameClick
@@ -5708,7 +5719,7 @@ object FormMain: TFormMain
     object ButtonHelp: TButton
       Left = 192
       Height = 25
-      Top = 5
+      Top = 3
       Width = 27
       Caption = '?'
       OnClick = ButtonHelpClick
@@ -5718,7 +5729,7 @@ object FormMain: TFormMain
   object PanelCreate: TPanel
     Left = 0
     Height = 35
-    Top = 35
+    Top = 32
     Width = 398
     Align = alTop
     BevelOuter = bvNone
@@ -5748,7 +5759,7 @@ object FormMain: TFormMain
   object PanelEdit: TPanel
     Left = 0
     Height = 35
-    Top = 70
+    Top = 67
     Width = 398
     Align = alTop
     BevelOuter = bvNone
@@ -5776,7 +5787,7 @@ object FormMain: TFormMain
   object PanelRename: TPanel
     Left = 0
     Height = 35
-    Top = 105
+    Top = 102
     Width = 398
     Align = alTop
     BevelOuter = bvNone
@@ -5805,30 +5816,44 @@ object FormMain: TFormMain
   end
   object PanelMemo: TPanel
     Left = 0
-    Height = 274
-    Top = 140
+    Height = 277
+    Top = 137
     Width = 398
     Align = alClient
     BevelOuter = bvNone
     Caption = 'PanelMemo'
-    ClientHeight = 274
+    ClientHeight = 277
     ClientWidth = 398
     TabOrder = 4
     Visible = False
     object MemoNote: TMemo
-      Left = 4
-      Height = 266
-      Top = 4
-      Width = 390
+      Left = 0
+      Height = 277
+      Top = 0
+      Width = 398
       Align = alClient
-      BorderSpacing.Around = 4
-      BorderSpacing.InnerBorder = 3
+      BorderSpacing.InnerBorder = 5
+      BorderStyle = bsNone
+      Color = 2238503
       Enabled = False
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'DejaVu Sans Mono'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Lines.Strings = (
+        'select shop_product.id,count(shop_income.id) '
+        'from shop_product inner join shop_income on '
+        '(shop_product.id=shop_income.product) group by '
+        'shop_product.id'
+      )
       OnChange = MemoNoteChange
       OnClick = MemoNoteClick
       OnEditingDone = MemoNoteEditingDone
       OnKeyDown = MemoNoteKeyDown
       OnMouseWheel = MemoNoteMouseWheel
+      ParentFont = False
       ScrollBars = ssAutoVertical
       TabOrder = 0
       Visible = False

@@ -30,7 +30,8 @@ implementation
 
 function BnoteDirectory: String;
 begin
-  Result := GetUserDir() + '.notes' + DirectorySeparator;
+  //Result := GetUserDir() + '.notes' + DirectorySeparator;
+  Result := GetCurrentDirUTF8 + DirectorySeparator + 'notes' + DirectorySeparator;
   if not DirectoryExistsUTF8(Result) then CreateDirUTF8(Result);
 end;
 

@@ -1,4 +1,5 @@
 /backup
+/notes
 *.bak
 *.ppu
 *.ppw

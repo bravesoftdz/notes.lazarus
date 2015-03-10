@@ -1,16 +1,16 @@
 { This is an automatically generated lazarus resource file }
 
 LazarusResources.Add('TFormMain','FORMDATA',[
-  'TPF0'#9'TFormMain'#8'FormMain'#4'Left'#3#236#1#6'Height'#3#158#1#3'Top'#3#2#1
-  +#5'Width'#3#142#1#13'ActiveControl'#7#9'PanelMain'#10'AlphaBlend'#9#15'Alpha'
-  +'BlendValue'#3#230#0#11'BorderIcons'#11#12'biSystemMenu'#10'biMinimize'#0#11
-  +'BorderStyle'#7#8'bsSingle'#7'Caption'#6#5'Notes'#12'ClientHeight'#3#158#1#11
-  +'ClientWidth'#3#142#1#21'Constraints.MinHeight'#3'j'#1#20'Constraints.MinWid'
-  +'th'#3#7#1#12'Font.CharSet'#7#12'ANSI_CHARSET'#11'Font.Height'#2#240#9'Font.'
-  +'Name'#6#11'Ubuntu Mono'#10'Font.Pitch'#7#7'fpFixed'#12'Font.Quality'#7#7'fq'
-  +'Draft'#9'FormStyle'#7#17'fsSystemStayOnTop'#9'Icon.Data'#10#234#187#2#0#230
-  +#187#2#0#0#0#1#0#9#0#0#0#0#0#1#0' '#0#144'C'#0#0#150#0#0#0#128#128#0#0#1#0' '
-  +#0'('#8#1#0'&D'#0#0'``'#0#0#1#0' '#0#168#148#0#0'NL'#1#0'HH'#0#0#1#0' '#0#136
+  'TPF0'#9'TFormMain'#8'FormMain'#4'Left'#3#176#1#6'Height'#3#158#1#3'Top'#3#168
+  +#0#5'Width'#3#142#1#13'ActiveControl'#7#9'PanelMain'#10'AlphaBlend'#9#15'Alp'
+  +'haBlendValue'#3#230#0#11'BorderIcons'#11#12'biSystemMenu'#10'biMinimize'#0#7
+  +'Caption'#6#5'Notes'#12'ClientHeight'#3#158#1#11'ClientWidth'#3#142#1#5'Colo'
+  +'r'#7#6'clForm'#21'Constraints.MinHeight'#3'j'#1#20'Constraints.MinWidth'#3#7
+  +#1#12'Font.CharSet'#7#12'ANSI_CHARSET'#11'Font.Height'#2#243#9'Font.Name'#6
+  +#16'DejaVu Sans Mono'#10'Font.Pitch'#7#7'fpFixed'#12'Font.Quality'#7#7'fqDra'
+  +'ft'#9'FormStyle'#7#17'fsSystemStayOnTop'#9'Icon.Data'#10#234#187#2#0#230#187
+  +#2#0#0#0#1#0#9#0#0#0#0#0#1#0' '#0#144'C'#0#0#150#0#0#0#128#128#0#0#1#0' '#0
+  +'('#8#1#0'&D'#0#0'``'#0#0#1#0' '#0#168#148#0#0'NL'#1#0'HH'#0#0#1#0' '#0#136
   +'T'#0#0#246#224#1#0'@@'#0#0#1#0' '#0'(B'#0#0'~5'#2#0'00'#0#0#1#0' '#0#168'%'
   +#0#0#166'w'#2#0'  '#0#0#1#0' '#0#168#16#0#0'N'#157#2#0#24#24#0#0#1#0' '#0#136
   +#9#0#0#246#173#2#0#16#16#0#0#1#0' '#0'h'#4#0#0'~'#183#2#0#137'PNG'#13#10#26
@@ -7720,56 +7720,66 @@ LazarusResources.Add('TFormMain','FORMDATA',[
   +#0#0#0#0#0#0#0#0#0#0#0#1#0#0#128#7#0#0#10'OnActivate'#7#12'FormActivate'#7'O'
   +'nClose'#7#9'FormClose'#8'OnCreate'#7#10'FormCreate'#12'OnDeactivate'#7#14'F'
   +'ormDeactivate'#9'OnDestroy'#7#11'FormDestroy'#6'OnShow'#7#8'FormShow'#10'LC'
-  +'LVersion'#6#7'1.0.8.0'#7'Visible'#9#0#6'TPanel'#9'PanelList'#4'Left'#2#0#6
-  +'Height'#3#18#1#3'Top'#3#140#0#5'Width'#3#142#1#5'Align'#7#8'alClient'#10'Be'
-  +'velOuter'#7#6'bvNone'#12'ClientHeight'#3#18#1#11'ClientWidth'#3#142#1#8'Tab'
-  +'Order'#2#5#0#8'TListBox'#13'ListViewNotes'#4'Left'#2#4#6'Height'#3#10#1#3'T'
-  +'op'#2#4#5'Width'#3#134#1#5'Align'#7#8'alClient'#20'BorderSpacing.Around'#2#4
-  +#25'BorderSpacing.InnerBorder'#2#3#13'Items.Strings'#1#6#0#0#10'ItemHeight'#2
-  +#20#10'OnDblClick'#7#21'ListViewNotesDblClick'#9'OnKeyDown'#7#20'ListViewNot'
-  +'esKeyDown'#12'OnMouseWheel'#7#23'ListViewNotesMouseWheel'#5'Style'#7#16'lbO'
-  +'wnerDrawFixed'#8'TabOrder'#2#0#0#0#0#6'TPanel'#9'PanelMain'#4'Left'#2#0#6'H'
-  +'eight'#2'#'#3'Top'#2#0#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'BevelOuter'#7
-  +#6'bvNone'#12'ClientHeight'#2'#'#11'ClientWidth'#3#142#1#8'TabOrder'#2#0#0#7
-  +'TButton'#9'ButtonNew'#4'Left'#2#5#6'Height'#2#25#3'Top'#2#5#5'Width'#2'6'#7
-  +'Caption'#6#3'New'#7'OnClick'#7#14'ButtonNewClick'#8'TabOrder'#2#0#0#0#7'TBu'
-  +'tton'#14'ButtonSettings'#4'Left'#3#224#0#6'Height'#2#25#3'Top'#2#5#5'Width'
-  +#2'P'#7'Caption'#6#8'Settings'#7'OnClick'#7#19'ButtonSettingsClick'#8'TabOrd'
-  +'er'#2#1#7'Visible'#8#0#0#7'TButton'#12'ButtonDelete'#4'Left'#2'@'#6'Height'
-  +#2#25#3'Top'#2#5#5'Width'#2';'#7'Caption'#6#6'Delete'#7'OnClick'#7#17'Button'
-  +'DeleteClick'#8'TabOrder'#2#2#0#0#7'TButton'#12'ButtonRename'#4'Left'#2#127#6
-  +'Height'#2#25#3'Top'#2#5#5'Width'#2';'#7'Caption'#6#6'Rename'#7'OnClick'#7#17
-  +'ButtonRenameClick'#8'TabOrder'#2#3#0#0#7'TButton'#10'ButtonHelp'#4'Left'#3
-  +#192#0#6'Height'#2#25#3'Top'#2#5#5'Width'#2#27#7'Caption'#6#1'?'#7'OnClick'#7
-  +#15'ButtonHelpClick'#8'TabOrder'#2#4#0#0#0#6'TPanel'#11'PanelCreate'#4'Left'
-  +#2#0#6'Height'#2'#'#3'Top'#2'#'#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'Beve'
+  +'LVersion'#6#7'1.2.6.0'#7'Visible'#9#0#6'TPanel'#9'PanelList'#4'Left'#2#0#6
+  +'Height'#3#21#1#3'Top'#3#137#0#5'Width'#3#142#1#5'Align'#7#8'alClient'#10'Be'
+  +'velOuter'#7#6'bvNone'#12'ClientHeight'#3#21#1#11'ClientWidth'#3#142#1#8'Tab'
+  +'Order'#2#5#0#8'TListBox'#13'ListViewNotes'#4'Left'#2#0#6'Height'#3#21#1#3'T'
+  +'op'#2#0#5'Width'#3#142#1#5'Align'#7#8'alClient'#25'BorderSpacing.InnerBorde'
+  +'r'#2#3#11'BorderStyle'#7#6'bsNone'#5'Color'#4'''("'#0#12'Font.CharSet'#7#12
+  +'ANSI_CHARSET'#10'Font.Color'#7#7'clWhite'#11'Font.Height'#2#243#9'Font.Name'
+  +#6#16'DejaVu Sans Mono'#10'Font.Pitch'#7#7'fpFixed'#12'Font.Quality'#7#7'fqD'
+  +'raft'#13'Items.Strings'#1#6#0#0#10'ItemHeight'#2#20#10'OnDblClick'#7#21'Lis'
+  +'tViewNotesDblClick'#10'OnDrawItem'#7#21'ListViewNotesDrawItem'#9'OnKeyDown'
+  +#7#20'ListViewNotesKeyDown'#12'OnMouseWheel'#7#23'ListViewNotesMouseWheel'#10
+  +'ParentFont'#8#5'Style'#7#16'lbOwnerDrawFixed'#8'TabOrder'#2#0#0#0#0#6'TPane'
+  +'l'#9'PanelMain'#4'Left'#2#0#6'Height'#2' '#3'Top'#2#0#5'Width'#3#142#1#5'Al'
+  +'ign'#7#5'alTop'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2' '#11'ClientW'
+  +'idth'#3#142#1#5'Color'#7#6'clForm'#11'ParentColor'#8#8'TabOrder'#2#0#0#7'TB'
+  +'utton'#9'ButtonNew'#4'Left'#2#5#6'Height'#2#25#3'Top'#2#3#5'Width'#2'8'#7'C'
+  +'aption'#6#3'New'#7'OnClick'#7#14'ButtonNewClick'#8'TabOrder'#2#0#0#0#7'TBut'
+  +'ton'#14'ButtonSettings'#4'Left'#3#224#0#6'Height'#2#25#3'Top'#2#3#5'Width'#2
+  +'P'#7'Caption'#6#8'Settings'#7'OnClick'#7#19'ButtonSettingsClick'#8'TabOrder'
+  +#2#1#7'Visible'#8#0#0#7'TButton'#12'ButtonDelete'#4'Left'#2'A'#6'Height'#2#25
+  +#3'Top'#2#3#5'Width'#2':'#7'Caption'#6#6'Delete'#7'OnClick'#7#17'ButtonDelet'
+  +'eClick'#8'TabOrder'#2#2#0#0#7'TButton'#12'ButtonRename'#4'Left'#2#127#6'Hei'
+  +'ght'#2#25#3'Top'#2#3#5'Width'#2';'#7'Caption'#6#6'Rename'#7'OnClick'#7#17'B'
+  +'uttonRenameClick'#8'TabOrder'#2#3#0#0#7'TButton'#10'ButtonHelp'#4'Left'#3
+  +#192#0#6'Height'#2#25#3'Top'#2#3#5'Width'#2#27#7'Caption'#6#1'?'#7'OnClick'#7
+  ,#15'ButtonHelpClick'#8'TabOrder'#2#4#0#0#0#6'TPanel'#11'PanelCreate'#4'Left'
+  +#2#0#6'Height'#2'#'#3'Top'#2' '#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'Beve'
   +'lOuter'#7#6'bvNone'#12'ClientHeight'#2'#'#11'ClientWidth'#3#142#1#8'TabOrde'
   +'r'#2#1#7'Visible'#8#0#5'TEdit'#8'EditName'#4'Left'#2#5#6'Height'#2#25#3'Top'
-  ,#2#5#5'Width'#3#187#0#8'AutoSize'#8#9'OnKeyDown'#7#15'EditNameKeyDown'#8'Tab'
+  +#2#5#5'Width'#3#187#0#8'AutoSize'#8#9'OnKeyDown'#7#15'EditNameKeyDown'#8'Tab'
   +'Order'#2#0#0#0#7'TButton'#12'ButtonCreate'#4'Left'#3#197#0#6'Height'#2#25#3
   +'Top'#2#5#5'Width'#2';'#7'Caption'#6#6'Create'#7'OnClick'#7#17'ButtonCreateC'
   +'lick'#8'TabOrder'#2#1#0#0#0#6'TPanel'#9'PanelEdit'#4'Left'#2#0#6'Height'#2
-  +'#'#3'Top'#2'F'#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'BevelOuter'#7#6'bvNo'
+  +'#'#3'Top'#2'C'#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'BevelOuter'#7#6'bvNo'
   +'ne'#12'ClientHeight'#2'#'#11'ClientWidth'#3#142#1#8'TabOrder'#2#2#7'Visible'
   +#8#0#7'TButton'#10'ButtonDone'#4'Left'#2#5#6'Height'#2#25#3'Top'#2#4#5'Width'
   +#2';'#7'Caption'#6#4'Done'#7'OnClick'#7#15'ButtonDoneClick'#8'TabOrder'#2#0#0
   +#0#6'TLabel'#9'LabelName'#4'Left'#2'H'#6'Height'#2#1#3'Top'#2#7#5'Width'#2#1
   +#11'ParentColor'#8#0#0#0#6'TPanel'#11'PanelRename'#4'Left'#2#0#6'Height'#2'#'
-  +#3'Top'#2'i'#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'BevelOuter'#7#6'bvNone'
+  +#3'Top'#2'f'#5'Width'#3#142#1#5'Align'#7#5'alTop'#10'BevelOuter'#7#6'bvNone'
   +#12'ClientHeight'#2'#'#11'ClientWidth'#3#142#1#8'TabOrder'#2#3#7'Visible'#8#0
   +#5'TEdit'#10'EditRename'#4'Left'#2#5#6'Height'#2#25#3'Top'#2#5#5'Width'#3#187
   +#0#8'AutoSize'#8#9'OnKeyDown'#7#17'EditRenameKeyDown'#8'TabOrder'#2#1#0#0#7
   +'TButton'#13'ButtonSetname'#4'Left'#3#197#0#6'Height'#2#25#3'Top'#2#5#5'Widt'
   +'h'#2';'#7'Caption'#6#6'Rename'#7'OnClick'#7#18'ButtonSetnameClick'#8'TabOrd'
-  +'er'#2#0#0#0#0#6'TPanel'#9'PanelMemo'#4'Left'#2#0#6'Height'#3#18#1#3'Top'#3
-  +#140#0#5'Width'#3#142#1#5'Align'#7#8'alClient'#10'BevelOuter'#7#6'bvNone'#7
-  +'Caption'#6#9'PanelMemo'#12'ClientHeight'#3#18#1#11'ClientWidth'#3#142#1#8'T'
-  +'abOrder'#2#4#7'Visible'#8#0#5'TMemo'#8'MemoNote'#4'Left'#2#4#6'Height'#3#10
-  +#1#3'Top'#2#4#5'Width'#3#134#1#5'Align'#7#8'alClient'#20'BorderSpacing.Aroun'
-  +'d'#2#4#25'BorderSpacing.InnerBorder'#2#3#7'Enabled'#8#8'OnChange'#7#14'Memo'
-  +'NoteChange'#7'OnClick'#7#13'MemoNoteClick'#13'OnEditingDone'#7#19'MemoNoteE'
-  +'ditingDone'#9'OnKeyDown'#7#15'MemoNoteKeyDown'#12'OnMouseWheel'#7#18'MemoNo'
-  +'teMouseWheel'#10'ScrollBars'#7#14'ssAutoVertical'#8'TabOrder'#2#0#7'Visible'
-  +#8#0#0#0#10'TXMLConfig'#9'XMLConfig'#10'StartEmpty'#8#8'RootName'#18#6#0#0#0
-  +'C'#0'O'#0'N'#0'F'#0'I'#0'G'#0#4'left'#3#192#0#3'top'#2'@'#0#0#0
+  +'er'#2#0#0#0#0#6'TPanel'#9'PanelMemo'#4'Left'#2#0#6'Height'#3#21#1#3'Top'#3
+  +#137#0#5'Width'#3#142#1#5'Align'#7#8'alClient'#10'BevelOuter'#7#6'bvNone'#7
+  +'Caption'#6#9'PanelMemo'#12'ClientHeight'#3#21#1#11'ClientWidth'#3#142#1#8'T'
+  +'abOrder'#2#4#7'Visible'#8#0#5'TMemo'#8'MemoNote'#4'Left'#2#0#6'Height'#3#21
+  +#1#3'Top'#2#0#5'Width'#3#142#1#5'Align'#7#8'alClient'#25'BorderSpacing.Inner'
+  +'Border'#2#5#11'BorderStyle'#7#6'bsNone'#5'Color'#4'''("'#0#7'Enabled'#8#12
+  +'Font.CharSet'#7#12'ANSI_CHARSET'#10'Font.Color'#7#7'clWhite'#11'Font.Height'
+  +#2#243#9'Font.Name'#6#16'DejaVu Sans Mono'#10'Font.Pitch'#7#7'fpFixed'#12'Fo'
+  +'nt.Quality'#7#7'fqDraft'#13'Lines.Strings'#1#6'-select shop_product.id,coun'
+  +'t(shop_income.id) '#6',from shop_product inner join shop_income on '#6'/(sh'
+  +'op_product.id=shop_income.product) group by '#6#15'shop_product.id'#0#8'OnC'
+  +'hange'#7#14'MemoNoteChange'#7'OnClick'#7#13'MemoNoteClick'#13'OnEditingDone'
+  +#7#19'MemoNoteEditingDone'#9'OnKeyDown'#7#15'MemoNoteKeyDown'#12'OnMouseWhee'
+  +'l'#7#18'MemoNoteMouseWheel'#10'ParentFont'#8#10'ScrollBars'#7#14'ssAutoVert'
+  +'ical'#8'TabOrder'#2#0#7'Visible'#8#0#0#0#10'TXMLConfig'#9'XMLConfig'#10'Sta'
+  +'rtEmpty'#8#8'RootName'#18#6#0#0#0'C'#0'O'#0'N'#0'F'#0'I'#0'G'#0#4'left'#3
+  +#192#0#3'top'#2'@'#0#0#0
 ]);

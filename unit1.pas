@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   Menus, StdCtrls, ComCtrls, ExtCtrls, Buttons, Unit2, _Bnote,
-  XMLConf, types;
+  XMLConf, types, LCLType;
 
 type
 
@@ -54,6 +54,8 @@ type
     procedure FormShow(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
     procedure ListViewNotesDblClick(Sender: TObject);
+    procedure ListViewNotesDrawItem(Control: TWinControl; Index: Integer;
+      ARect: TRect; State: TOwnerDrawState);
     procedure ListViewNotesKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure ListViewNotesMouseWheel(Sender: TObject; Shift: TShiftState;
@@ -169,7 +171,7 @@ begin
   FormMain.Width := XMLConfig.GetValue('/Form/Width', FormMain.Width);
   FormMain.Height := XMLConfig.GetValue('/Form/Height', FormMain.Height);
   FormMain.AlphaBlendValue := XMLConfig.GetValue('/Form/Alpha', FormMain.AlphaBlendValue);
-
+  FormMain.Caption:=BnoteDirectory;
 end;
 
 procedure TFormMain.FormDeactivate(Sender: TObject);
@@ -208,6 +210,29 @@ begin
     MemoEnable (MemoNote);
     MemoNote.SelStart := 0;
     MemoNote.SetFocus;
+  end;
+end;
+
+procedure TFormMain.ListViewNotesDrawItem(Control: TWinControl; Index: Integer;
+  ARect: TRect; State: TOwnerDrawState);
+begin
+  with (Control as TListBox).Canvas do
+  begin
+    if odSelected in State then
+    begin
+      Brush.Color := $000F559D;
+      Font.Color := clWhite;
+    end else
+    begin
+      Brush.Color := $00222827;
+      Font.Color := clWhite;
+    end;
+    FillRect(ARect);
+    TextOut(ARect.Left + 2, ARect.Top+2, ListViewNotes.Items[index]);
+    if (odFocused in State) then
+    begin
+       DrawFocusRect(ARect);
+    end;
   end;
 end;
 

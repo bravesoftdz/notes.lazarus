@@ -1,10 +1,10 @@
-#Bnote
+#Notes
 
-Be safe while taking notes.
-* Saves automatically while you breathe
-* Uses [user home folder]/.notes to store notes
-* Install monospaced.ttf to avoid pain in your eyes
+Takin notes make human more productive but developer twice productive
 
-(Taking notes makes human being 50% productive)
+If you dont want to compile it yourself you can use precompiled bnote.exe for Windows
+Or bnote for linux
+
+Download and install Dejavu Sans Mono font for better visual experience
 
 ![Screenshot](./screen.png)

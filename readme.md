@@ -7,4 +7,6 @@ Or bnote for linux
 
 Download and install Dejavu Sans Mono font for better visual experience
 
-![Screenshot](./screen.png)
+![Screenshot](./screen2.png)
+
+![Screenshot](./screen1.png)

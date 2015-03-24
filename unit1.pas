@@ -61,7 +61,6 @@ type
     procedure ListViewNotesMouseWheel(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
     procedure MemoNoteChange(Sender: TObject);
-    procedure MemoNoteClick(Sender: TObject);
     procedure MemoNoteEditingDone(Sender: TObject);
     procedure MemoNoteKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
       );
@@ -161,7 +160,7 @@ procedure TFormMain.FormCreate(Sender: TObject);
 begin
   {$IFDEF UNIX}
   FormMain.Font.Name := 'Monospace';
-  FormMain.Font.Size := 7;
+  //FormMain.Font.Size := 7;
   {$ENDIF}
   FormMainAlphaRestore := 0;
   BnoteFilesRefresh (ListViewNotes);
@@ -261,6 +260,7 @@ end;
 procedure TFormMain.MemoNoteChange(Sender: TObject);
 var Previous_, Current, Replace: String;
 begin
+  {$IFDEF Windows}
   if MemoNote.SelStart>1 then
   begin
   MemoNote.SelStart:=MemoNote.SelStart-2;
@@ -292,11 +292,7 @@ begin
       MemoNote.SelText:=Replace;
     end;
   end;
-end;
-
-procedure TFormMain.MemoNoteClick(Sender: TObject);
-begin
-
+  {$ENDIF}
 end;
 
 procedure TFormMain.MemoNoteEditingDone(Sender: TObject);

@@ -5,7 +5,7 @@ unit LibBnote;
 interface
 
 uses
-  Classes, SysUtils, ComCtrls, StdCtrls, FileUtil, LibString, LibArray, LibFile;
+  Classes, SysUtils, ComCtrls, StdCtrls, FileUtil, LibString, LibArray, LibFile, SynEdit;
 
 function BnoteDirectory: String;
 function BnoteFilesLoad: Boolean;
@@ -16,8 +16,8 @@ procedure BnoteFileDelete (var ListView: TListBox);
 function BnoteFileCaption (Caption: String): String;
 function BnoteFileName (Caption: String): String;
 procedure BnoteViewRefresh (var ListView: TListBox);
-function BnoteFileLoad (Caption:String; var Memo: TMemo): Boolean;
-function BnoteFileSave (Caption:String; var Memo: TMemo): Boolean;
+function BnoteFileLoad (Caption:String; var Memo: TSynEdit): Boolean;
+function BnoteFileSave (Caption:String; var Memo: TSynEdit): Boolean;
 procedure BnoteFileRename (CaptionFrom, CaptionTo: String);
 function BnoteConfigPath: String;
 
@@ -157,7 +157,7 @@ begin
   Result := StrReplace ('_', ' ', Caption);
 end;
 
-function BnoteFileSave (Caption:String; var Memo: TMemo): Boolean;
+function BnoteFileSave (Caption:String; var Memo: TSynEdit): Boolean;
 var Note: TFile;
    Name: String;
 begin
@@ -169,7 +169,7 @@ begin
   Note.Close;
 end;
 
-function BnoteFileLoad (Caption:String; var Memo: TMemo): Boolean;
+function BnoteFileLoad (Caption:String; var Memo: TSynEdit): Boolean;
 var Note: TFile;
    Name: String;
 begin

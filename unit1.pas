@@ -5,9 +5,9 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  Menus, StdCtrls, ComCtrls, ExtCtrls, Buttons, Unit2, LibBnote,
-  XMLConf, types, LCLType;
+  Classes, SysUtils, FileUtil, SynEdit, SynHighlighterAny, SynHighlighterSQL,
+  LResources, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls, ComCtrls,
+  ExtCtrls, Buttons, Unit2, LibBnote, XMLConf, types, LCLType, LibString;
 
 type
 
@@ -26,13 +26,14 @@ type
     EditRename: TEdit;
     LabelName: TLabel;
     ListViewNotes: TListBox;
-    MemoNote: TMemo;
     PanelEdit: TPanel;
     PanelList: TPanel;
     PanelMemo: TPanel;
     PanelRename: TPanel;
     PanelMain: TPanel;
     PanelCreate: TPanel;
+    MemoNote: TSynEdit;
+    SynSQLSyn1: TSynSQLSyn;
     XMLConfig: TXMLConfig;
     procedure ButtonDeleteClick(Sender: TObject);
     procedure ButtonDoneClick(Sender: TObject);
@@ -61,6 +62,7 @@ type
     procedure ListViewNotesMouseWheel(Sender: TObject; Shift: TShiftState;
       WheelDelta: Integer; MousePos: TPoint; var Handled: Boolean);
     procedure MemoNoteChange(Sender: TObject);
+    procedure MemoNoteChangeUpdating(ASender: TObject; AnUpdating: Boolean);
     procedure MemoNoteEditingDone(Sender: TObject);
     procedure MemoNoteKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
       );
@@ -93,7 +95,7 @@ begin
   if (Name=FormMain.PanelRename.Name) then FormMain.PanelRename.Show else FormMain.PanelRename.Hide;
 end;
 
-procedure MemoEnable (var Memo: TMemo);
+procedure MemoEnable (var Memo: TSynEdit);
 begin
   FormMain.PanelMemo.Show;
   Memo.Enabled := True;
@@ -101,7 +103,7 @@ begin
   Memo.SetFocus;
 end;
 
-procedure MemoDisable (var Memo: TMemo);
+procedure MemoDisable (var Memo: TSynEdit);
 begin
   Memo.Visible := False;
   Memo.Enabled := False;
@@ -154,6 +156,7 @@ begin
   XMLConfig.SetValue('/Form/Left', FormMain.Left);
   XMLConfig.SetValue('/Form/Alpha', FormMain.AlphaBlendValue+FormMainAlphaRestore);
   XMLConfig.Flush;
+  MemoNoteEditingDone(Sender);
 end;
 
 procedure TFormMain.FormCreate(Sender: TObject);
@@ -258,41 +261,31 @@ begin
 end;
 
 procedure TFormMain.MemoNoteChange(Sender: TObject);
-var Previous_, Current, Replace: String;
+var Start,Replace: String;
 begin
-  {$IFDEF Windows}
-  if MemoNote.SelStart>1 then
+
+
+end;
+
+procedure TFormMain.MemoNoteChangeUpdating(ASender: TObject; AnUpdating: Boolean
+  );
+var Start,Replace: String;
+begin
+  {
+  Caption:=IntToStr(MemoNote.CaretX);
+  if MemoNote.CaretX=2 then
   begin
-  MemoNote.SelStart:=MemoNote.SelStart-2;
-  MemoNote.SelLength:=1;
-  Previous_ := MemoNote.SelText;
-  MemoNote.SelStart := MemoNote.SelStart + 1;
-  MemoNote.SelLength:=1;
-  Current := MemoNote.SelText;
-  MemoNote.SelStart := MemoNote.SelStart + 1;
-  end
-  else if MemoNote.SelStart=1 then
-  begin
-    MemoNote.SelStart := MemoNote.SelStart - 1;
-    MemoNote.SelLength:=1;
-    Current := MemoNote.SelText;
-    MemoNote.SelStart := MemoNote.SelStart + 1;
+   Start := Copy(MemoNote.LineText,0,1);
+   if Start='.' then Replace:='□'
+   else if Start='+' then Replace:='■'
+   else Replace:='';
+   if Replace<>'' then
+   begin
+      MemoNote.LineText:=Replace+MemoNote.LineText;
+   end;
+
   end;
-  //FormMain.Caption:= IntToStr(Ord(Previous_[2]));
-  if (Previous_=#10) or (MemoNote.SelStart=1) then
-  begin
-    Replace := '';
-    if Current='.' then Replace := '□';
-    if Current='+' then Replace := '■';
-    if Current='-' then Replace := '▬';
-    if (Replace<>'') then
-    begin
-      MemoNote.SelStart:=MemoNote.SelStart-1;
-      MemoNote.SelLength:=1;
-      MemoNote.SelText:=Replace;
-    end;
-  end;
-  {$ENDIF}
+  }
 end;
 
 procedure TFormMain.MemoNoteEditingDone(Sender: TObject);

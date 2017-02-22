@@ -5,7 +5,7 @@ unit LibBnote;
 interface
 
 uses
-  Classes, SysUtils, ComCtrls, StdCtrls, FileUtil, LibString, LibArray, LibFile, SynEdit;
+  Classes, SysUtils, ComCtrls, StdCtrls, LibString, LibArray, LibFile, SynEdit, FileUtil;
 
 function BnoteDirectory: String;
 function BnoteFilesLoad: Boolean;
@@ -39,9 +39,13 @@ end;
 function BnoteFilesLoad: Boolean;
 var Files: TStringList;
    Position: Integer;
+   Index: LongInt;
    Name: String;
    Count: Integer;
+   Log: TFile;
 begin
+     Log:= TFile.Assign(GetCurrentDirUTF8 + DirectorySeparator + 'log.txt');
+     if not Log.Exists then Log.Create else Log.Overwrite;
      Result := False;
      //Notes := TArrayStringInteger.Create;
      Notes := TArrayIntegerString.Create;
@@ -51,13 +55,21 @@ begin
        for Position:=0 to Files.Count-1 do
        begin
          Name := ExtractFileNameOnly(Files.Strings[Position]);
-         //Notes[ExtractFileNameOnly(Files.Strings[Position])] := FileAgeUTF8(Files.Strings[Position]);
-         Notes[FileAgeUTF8(Files.Strings[Position])] := ExtractFileNameOnly(Files.Strings[Position]);
+         Index := FileDate(Files.Strings[Position]);
+         if Notes.Exists(Index) then
+         begin
+           repeat
+             Index:=Index+1;
+           until not Notes.Exists(Index);
+         end;
+         Notes[Index] := Name;
+         Log.Write(IntToStr(FileDate(Files.Strings[Position]))+': '+ExtractFileNameOnly(Files.Strings[Position])+AnsiChar(#10));
          Count := Notes.Count;
        end;
        Notes.Rsort;
        Result := True;
      end;
+     Log.Close;
 end;
 
 procedure BnoteFilesRefresh (var ListView: TListBox);

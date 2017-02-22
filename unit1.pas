@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, SynEdit, SynHighlighterAny, SynHighlighterSQL,
+  Classes, SysUtils, SynEdit, SynHighlighterAny, SynHighlighterSQL,
   LResources, Forms, Controls, Graphics, Dialogs, Menus, StdCtrls, ComCtrls,
   ExtCtrls, Buttons, Unit2, LibBnote, XMLConf, types, LCLType, LibString;
 

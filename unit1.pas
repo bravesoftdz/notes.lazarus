@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  Menus, StdCtrls, ComCtrls, ExtCtrls, Buttons, Unit2, _Bnote,
+  Menus, StdCtrls, ComCtrls, ExtCtrls, Buttons, Unit2, LibBnote,
   XMLConf, types, LCLType;
 
 type
@@ -341,7 +341,7 @@ end;
 
 procedure TFormMain.ButtonSetnameClick(Sender: TObject);
 begin
-  if (EditRename.Text<>'') and (not Notes.Exists(BnoteFileName(EditRename.Text))) then
+  if (EditRename.Text<>'') and (not Notes.Contains(BnoteFileName(EditRename.Text))) then
   begin
     BnoteFileRename (ListViewNotes.Items[ListViewNotes.ItemIndex], EditRename.Text);
     BnoteFilesRefresh (ListViewNotes);

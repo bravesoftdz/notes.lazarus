@@ -1,11 +1,11 @@
-unit _Bnote;
+unit LibBnote;
 
 {$mode objfpc}
 
 interface
 
 uses
-  Classes, SysUtils, ComCtrls, StdCtrls, FileUtil, _Strings, _Arrays, _Files;
+  Classes, SysUtils, ComCtrls, StdCtrls, FileUtil, LibString, LibArray, LibFile;
 
 function BnoteDirectory: String;
 function BnoteFilesLoad: Boolean;
@@ -22,7 +22,8 @@ procedure BnoteFileRename (CaptionFrom, CaptionTo: String);
 function BnoteConfigPath: String;
 
 var
-   Notes: TArrayStringInteger;
+   //Notes: TArrayStringInteger;
+   Notes: TArrayIntegerString;
    const BnoteExtension = ExtensionSeparator + 'note';
 
 implementation
@@ -42,17 +43,19 @@ var Files: TStringList;
    Count: Integer;
 begin
      Result := False;
-     Notes := TArrayStringInteger.Create;
+     //Notes := TArrayStringInteger.Create;
+     Notes := TArrayIntegerString.Create;
      Files := FindAllFiles (BnoteDirectory, '*'+BnoteExtension, False);
      if Files.Count>0 then
      begin
        for Position:=0 to Files.Count-1 do
        begin
          Name := ExtractFileNameOnly(Files.Strings[Position]);
-         Notes[ExtractFileNameOnly(Files.Strings[Position])] := FileAgeUTF8(Files.Strings[Position]);
+         //Notes[ExtractFileNameOnly(Files.Strings[Position])] := FileAgeUTF8(Files.Strings[Position]);
+         Notes[FileAgeUTF8(Files.Strings[Position])] := ExtractFileNameOnly(Files.Strings[Position]);
          Count := Notes.Count;
        end;
-       Notes.Sort;
+       Notes.Rsort;
        Result := True;
      end;
 end;
@@ -64,8 +67,9 @@ begin
 end;
 
 procedure BnoteViewRefresh (var ListView: TListBox);
-var Current,Count: Integer;
+var Current,Count,Position: Integer;
 begin
+  Position:= 0;
   Current:=-1;
   if ListView.ItemIndex<>-1 then
   begin
@@ -76,7 +80,10 @@ begin
   Count := Notes.Count;
   while Notes.Foreach do
   begin
-    ListView.Items.Insert(0, BnoteFileCaption(Notes.Index));
+    //ListView.Items.Insert(0, BnoteFileCaption(Notes.Index));
+    //ListView.Items.Insert(Position, '['+IntToStr(Notes.Index)+']'+BnoteFileCaption(Notes.Value));
+    ListView.Items.Insert(Position, BnoteFileCaption(Notes.Value));
+    Position := Position + 1;
   end;
 
   if Current<>-1 then

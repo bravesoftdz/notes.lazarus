@@ -1,5 +1,5 @@
 1247198185: anime
-1121894024: bagi
+1247221628: bagi
 1146139259: batumi
 1177262674: bivaet
 1226265297: bluehost
@@ -29,7 +29,7 @@
 1121387175: inventar
 1134443493: iset_hosting
 1132274153: iset_plan
-1118604221: korvet
+1247221628: korvet
 1247198314: life
 1181386388: linux_todo
 1152784738: lycan_build
@@ -60,7 +60,7 @@
 1161106085: transaction_import
 1217659470: transaction_levels
 1157827698: tsavigot
-1200383233: ubuntu
+1247221779: ubuntu
 1126655387: valoran
 1109723852: vegas
 1183778570: warband

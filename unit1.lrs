@@ -8179,9 +8179,9 @@ LazarusResources.Add('TFormMain','FORMDATA',[
   +#0#0#10'ItemHeight'#2#20#10'OnDblClick'#7#21'ListViewNotesDblClick'#10'OnDra'
   +'wItem'#7#21'ListViewNotesDrawItem'#9'OnKeyDown'#7#20'ListViewNotesKeyDown'
   +#12'OnMouseWheel'#7#23'ListViewNotesMouseWheel'#10'ParentFont'#8#11'ScrollWi'
-  +'dth'#3'i'#1#5'Style'#7#16'lbOwnerDrawFixed'#8'TabOrder'#2#0#0#0#0#6'TPanel'
-  +#9'PanelMain'#4'Left'#2#0#6'Height'#2' '#3'Top'#2#0#5'Width'#3'i'#1#5'Align'
-  +#7#5'alTop'#10'BevelOuter'#7#6'bvNone'#11'BorderWidth'#2#1#12'ClientHeight'#2
+  +'dth'#2#255#5'Style'#7#16'lbOwnerDrawFixed'#8'TabOrder'#2#0#0#0#0#6'TPanel'#9
+  +'PanelMain'#4'Left'#2#0#6'Height'#2' '#3'Top'#2#0#5'Width'#3'i'#1#5'Align'#7
+  +#5'alTop'#10'BevelOuter'#7#6'bvNone'#11'BorderWidth'#2#1#12'ClientHeight'#2
   +' '#11'ClientWidth'#3'i'#1#5'Color'#4'VVV'#0#11'ParentColor'#8#8'TabOrder'#2
   +#0#0#7'TButton'#9'ButtonNew'#4'Left'#2#5#6'Height'#2#25#3'Top'#2#3#5'Width'#2
   +'8'#7'Caption'#6#3'New'#7'OnClick'#7#14'ButtonNewClick'#8'TabOrder'#2#0#0#0#7
@@ -8333,7 +8333,7 @@ LazarusResources.Add('TFormMain','FORMDATA',[
   +'terCodeFolding'#21'SynGutterCodeFolding1'#12'MouseActions'#14#0#21'MarkupIn'
   +'fo.Background'#7#6'clNone'#21'MarkupInfo.Foreground'#7#6'clGray'#20'MouseAc'
   +'tionsExpanded'#14#0#21'MouseActionsCollapsed'#14#0#0#0#0#0#0#10'TXMLConfig'
-  +#9'XMLConfig'#10'StartEmpty'#8#8'RootName'#21#6#0#0#0'C'#0'O'#0'N'#0'F'#0'I'
+  +#9'XMLConfig'#10'StartEmpty'#8#8'RootName'#18#6#0#0#0'C'#0'O'#0'N'#0'F'#0'I'
   +#0'G'#0#8'ReadOnly'#8#4'left'#3#192#0#3'top'#2'@'#0#0#10'TSynSQLSyn'#10'SynS'
   +'QLSyn1'#13'DefaultFilter'#6#23'SQL Files (*.sql)|*.sql'#7'Enabled'#8#24'Fun'
   +'ctionAttri.Foreground'#4'f'#217#239#0#26'IdentifierAttri.Foreground'#4#230
